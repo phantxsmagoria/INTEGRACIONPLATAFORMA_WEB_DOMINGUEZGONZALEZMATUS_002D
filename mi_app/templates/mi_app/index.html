@@ -43,6 +43,7 @@
     <div class="row py-lg-5">
       <div class="col-lg-4 col-md-6 mx-auto">
         <h1 class="fw-light">ASIGNACIÓN CARGA</h1>
+<<<<<<< HEAD
         <p class="lead text-body-secondary">Página de asignación de carga.</p>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -63,6 +64,33 @@
             {% endfor %}
           </ul>
         </div>
+=======
+        <p class="lead text-body-secondary">Página de asignación carga.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Sede</th>
+              <th>Escuela</th>
+              <th>Carrera</th>
+              <th>Docente</th>
+              <th>Asignatura</th>
+              <th>Sala Disponible</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for sala_disponible in salas_disponibles %}
+              <tr>
+                <td>{{ sala_disponible.asignatura.docente.carrera.escuela.sede.nombre }}</td>
+                <td>{{ sala_disponible.asignatura.docente.carrera.escuela.nombre }}</td>
+                <td>{{ sala_disponible.asignatura.docente.carrera.nombre }}</td>
+                <td>{{ sala_disponible.asignatura.docente.nombre }}</td>
+                <td>{{ sala_disponible.asignatura.nombre }}</td>
+                <td>{{ sala_disponible.sala.nombre }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+>>>>>>> c199ec28aa949830dc98cd786a8ad3e5f70461fe
       </div>
     </div>
     <table class="table table-striped">
