@@ -139,4 +139,8 @@ body {
 }
 
 /*fin footer footer*/
-
+.dropdown-menu.dropdown-menu-center {
+  transform: translateX(-50%);
+  left: 50% !important;
+  right: auto !important;
+}
